@@ -1,0 +1,53 @@
+/* Main container is injected, so we style based on its ID */
+#ai-extension-container {
+    /* Use a system font stack that is reliable and doesn't require an import */
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 999999;
+}
+
+#extension-popup {
+    transform: translateY(20px) scale(0.95);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease-in-out;
+    pointer-events: none;
+}
+
+#ai-extension-container.active #extension-popup {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}
+
+#ai-trigger-btn {
+    transition: all 0.3s ease-in-out;
+}
+
+#ai-extension-container.active #ai-trigger-btn {
+    transform: scale(0);
+    opacity: 0;
+}
+
+.custom-scrollbar::-webkit-scrollbar { width: 6px; }
+.custom-scrollbar::-webkit-scrollbar-track { background: #1f2937; }
+.custom-scrollbar::-webkit-scrollbar-thumb { background: #4b5563; border-radius: 3px; }
+.custom-scrollbar::-webkit-scrollbar-thumb:hover { background: #6b7280; }
+
+.chat-bubble-user {
+    background-color: #4f46e5; /* indigo-600 */
+    color: white;
+    align-self: flex-end;
+    border-radius: 1.5rem 1.5rem 0.25rem 1.5rem;
+}
+
+.chat-bubble-ai {
+    background-color: #374151; /* gray-700 */
+    color: #e5e7eb; /* gray-200 */
+    align-self: flex-start;
+    border-radius: 1.5rem 1.5rem 1.5rem 0.25rem;
+}
+

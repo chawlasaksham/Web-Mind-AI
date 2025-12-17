@@ -6,7 +6,7 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
         
         // --- IMPORTANT: ADD YOUR API KEY HERE ---
         // You can get a free key from Google AI Studio.
-        const API_KEY = "AIzaSyDZxIqH4ER3OI_wCmwZWSVp3XsV0dMqyAo"; 
+        const API_KEY = "PASTE YOUR API KEY HERE"; 
         
         // The specific Gemini model and API endpoint URL.
         const MODEL_NAME = 'gemini-1.5-flash-latest';
